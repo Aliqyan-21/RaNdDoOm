@@ -1,5 +1,5 @@
 #!/bin/bash
 
-g++ generator.cpp -o generator;
+g++ main.cpp -o main;
 
-./generator
+./main
