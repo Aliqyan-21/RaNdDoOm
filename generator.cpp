@@ -13,11 +13,16 @@ string password_generator(int n)
 	int prt1 = n/3;
 	int prt2 = n/3;
 	int prt3 = n - (2*(n/3));
+
+	std::random_device rd;
+    std::mt19937 gen(rd());
 	
 	int rand_num;
 	for(int i = 0; i < prt3; i++)
 	{
-		rand_num = rand() % 26;
+		std::uniform_int_distribution<int> distribution(0, 25);
+		rand_num = distribution(gen);
+		// rand_num = rand() % 26;
 
 		if(i <= (prt1/3))
 		{
@@ -34,7 +39,9 @@ string password_generator(int n)
 
 	for(int i = 0; i < prt2; i++)
 	{
-		rand_num = rand() % 10;
+		std::uniform_int_distribution<int> distribution(0, 9);
+		rand_num = distribution(gen);
+		// rand_num = rand() % 10;
 
 		char x = nums[rand_num];
 		password += x;
@@ -42,7 +49,9 @@ string password_generator(int n)
 
 	for(int i = 0; i < prt1; i++)
 	{
-		rand_num = rand() % 10;
+		std::uniform_int_distribution<int> distribution(0, 9);
+		rand_num = distribution(gen);
+		// rand_num = rand() % 10;
 
 		char x = symbols[rand_num];
 		password += x;
@@ -53,7 +62,6 @@ string password_generator(int n)
 
 int main()
 {
-	srand(time(0));
 	int n;
 	cin >> n;
 
