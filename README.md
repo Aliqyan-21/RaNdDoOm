@@ -37,7 +37,7 @@ This meticulous approach to password generation ensures a balanced mix of lowerc
 
 ## Tested Password on kaspersky.com:
 
-- **Length 8:** Despite being a shorter password, it was not found in any databases.
+- **Length 8:** Despite being too short password, it was not found in any databases.
 
     <kbd>
     <img src="images/3.png" width="500px" height="auto" />
