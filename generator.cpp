@@ -1,9 +1,10 @@
 #include <iostream>
 #include <random>
 #include <time.h>
+#include <algorithm>
 using namespace std;
 
-string password_generator(int n)
+string passwordGenerator(int n)
 {
 	string password = "";
 	const char alphabets[27] = {"abcdefghijklmnopqrstuvwxyz"};
@@ -57,6 +58,8 @@ string password_generator(int n)
 		password += x;
 	}
 
+	shuffle(password.begin(), password.end(), gen);
+
 	return password;
 }
 
@@ -65,7 +68,7 @@ int main()
 	int n;
 	cin >> n;
 
-	string password = password_generator(n);
+	string password = passwordGenerator(n);
 
 	cout << password << endl;
 }
