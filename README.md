@@ -4,7 +4,7 @@ This C++ project provides a simple and customizable password generator that allo
 
 ## Usage
 
-### `generator.cpp`
+### generator.cpp
 
 The `generator.cpp` file contains the C++ code for the password generator. It utilizes the Mersenne Twister random number engine and provides options for generating passwords with a mix of uppercase letters, lowercase letters, numbers, and symbols.
 
@@ -26,7 +26,7 @@ The `generator.cpp` file contains the C++ code for the password generator. It ut
 
 4. The generated password will be displayed, and you can copy and paste it as needed.
 
-### `run.sh - a simpler way to run the code` 
+### run.sh - a simpler way to run the code
 
 The `run.sh` Bash script simplifies the compilation and execution process for the C++ program. This is only for linux.
 
