@@ -72,4 +72,6 @@ int main()
 	string password = passwordGenerator(n);
 
 	cout << "Password generated is: " << password << endl << "copy and paste it! Thank You!\n";
+	
+	return 0;
 }
