@@ -1,12 +1,10 @@
 # Password Generator
 
-This C++ project provides a simple and customizable password generator that creates strong and random passwords.
+This C++ project introduces a sophisticated and customizable password generator that produces robust and unpredictable passwords.
 
 ## Unique Algorithm
 
-The password generation algorithm in this project is a carefully crafted process designed to ensure the strength and randomness of generated passwords.
-
-### Algorithm Steps:
+The password generation algorithm implemented in this project ensures the creation of strong and random passwords through a carefully crafted process. The following steps outline the unique algorithm:
 
 1. **Initialize Character Sets:**
    - Define arrays `alphabets`, `nums`, and `symbols` representing lowercase letters, numbers, and symbols, respectively.
@@ -33,33 +31,27 @@ The password generation algorithm in this project is a carefully crafted process
 8. **Return Generated Password:**
    - The generated password is returned, ready to be displayed or copied.
 
-This meticulous approach to password generation ensures a balanced mix of lowercase letters, numbers, and symbols, while the use of shuffling adds an extra layer of unpredictability. The result is a strong and unique password suitable for various security needs.
+This meticulous approach to password generation ensures a balanced mix of lowercase letters, numbers, and symbols. The use of shuffling adds an extra layer of unpredictability, resulting in a strong and unique password suitable for various security needs.
 
 ## Tested Password on kaspersky.com:
 
-- **Length 8:** Despite being too short password, it was not found in any databases.
+- **Length 8:** Despite being a short password, it was not found in any databases.
 
-    <kbd>
-    <img src="images/3.png" width="500px" height="auto" />
-    </kbd>
+    ![Tested Password Length 8](images/3.png)
 
 - **Length 12:**
 
-    <kbd>
-    <img src="images/1.png" width="500px" height="auto" />
-    </kbd>
+    ![Tested Password Length 12](images/1.png)
 
 - **Length 16:**
 
-    <kbd>
-    <img src="images/2.png" width="500px" height="auto" />
-    </kbd>
+    ![Tested Password Length 16](images/2.png)
 
 ## Usage
 
 ### generator.cpp
 
-The `generator.cpp` file contains the C++ code for the password generator. It utilizes a unique algorithm along with the Mersenne Twister random number engine and provides options for generating passwords with a mix of uppercase letters, lowercase letters, numbers, and symbols.
+The `generator.cpp` file contains the C++ code for the password generator. It utilizes the unique algorithm along with the Mersenne Twister random number engine and provides options for generating passwords with a mix of uppercase letters, lowercase letters, numbers, and symbols.
 
 #### How to Run:
 
