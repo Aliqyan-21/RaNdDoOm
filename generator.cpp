@@ -15,13 +15,13 @@ string passwordGenerator(int n)
 	int prt2 = n/3;
 	int prt3 = n - (2*(n/3));
 
-	std::random_device rd;
-    std::mt19937 gen(rd());
+	random_device rd;
+    mt19937 gen(rd());
 	
 	int rand_num;
 	for(int i = 0; i < prt3; i++)
 	{
-		std::uniform_int_distribution<int> distribution(0, 25);
+		uniform_int_distribution<int> distribution(0, 25);
 		rand_num = distribution(gen);
 		// rand_num = rand() % 26;
 
@@ -40,7 +40,7 @@ string passwordGenerator(int n)
 
 	for(int i = 0; i < prt2; i++)
 	{
-		std::uniform_int_distribution<int> distribution(0, 9);
+		uniform_int_distribution<int> distribution(0, 9);
 		rand_num = distribution(gen);
 		// rand_num = rand() % 10;
 
@@ -50,7 +50,7 @@ string passwordGenerator(int n)
 
 	for(int i = 0; i < prt1; i++)
 	{
-		std::uniform_int_distribution<int> distribution(0, 9);
+		uniform_int_distribution<int> distribution(0, 9);
 		rand_num = distribution(gen);
 		// rand_num = rand() % 10;
 
@@ -65,10 +65,11 @@ string passwordGenerator(int n)
 
 int main()
 {
+	cout << "Enter length of password(should be 12 or more for strongness): "; 
 	int n;
 	cin >> n;
 
 	string password = passwordGenerator(n);
 
-	cout << password << endl;
+	cout << "Password generated is: " << password << endl << "copy and paste it! Thank You!\n";
 }
