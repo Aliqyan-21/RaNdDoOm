@@ -1,6 +1,7 @@
 #include <iostream>
 #include "generator.h"
 #include "savePassword.h"
+#include "encrypt.h"
 using namespace std;
 
 int main()
@@ -24,7 +25,8 @@ int main()
 
 		if(choice == 'y')
 		{
-			passwordSave(password);
+      vector <int> enc = encrypt(password);
+			passwordSave(enc);
 			break;
 		}
 
