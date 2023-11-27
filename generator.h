@@ -3,6 +3,7 @@
 
 #include <random>
 #include <algorithm>
+#include "random.h"
 using namespace std;
 
 string passwordGenerator(int n)
@@ -16,15 +17,12 @@ string passwordGenerator(int n)
 	int prt2 = n/3;
 	int prt3 = n - (2*(n/3));
 
-	random_device rd;
-    mt19937 gen(rd());
-	
+
 	int rand_num;
 	for(int i = 0; i < prt3; i++)
 	{
-		uniform_int_distribution<int> distribution(0, 25);
-		rand_num = distribution(gen);
-		// rand_num = rand() % 26;
+
+		rand_num = makeRandom(0, 25);
 
 		if(i <= (prt1/3))
 		{
@@ -41,9 +39,7 @@ string passwordGenerator(int n)
 
 	for(int i = 0; i < prt2; i++)
 	{
-		uniform_int_distribution<int> distribution(0, 9);
-		rand_num = distribution(gen);
-		// rand_num = rand() % 10;
+		rand_num = makeRandom(0, 9);
 
 		char x = nums[rand_num];
 		password += x;
@@ -51,15 +47,12 @@ string passwordGenerator(int n)
 
 	for(int i = 0; i < prt1; i++)
 	{
-		uniform_int_distribution<int> distribution(0, 9);
-		rand_num = distribution(gen);
-		// rand_num = rand() % 10;
-
+		rand_num = makeRandom(0, 9);
 		char x = symbols[rand_num];
 		password += x;
 	}
 
-	shuffle(password.begin(), password.end(), gen);
+	random_shuffle(password.begin(), password.end());
 
 	return password;
 }
