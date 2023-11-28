@@ -22,11 +22,13 @@ void passwordSave(vector<int>enc){
   int ran;
 	if(pswrdFile.is_open())
 	{
+    int size = enc.size();
     pswrdFile << pswrdKey << " : ";
-    for(int val : enc){
+    for(int i = 0; i<size-1;i++){
       ran = makeRandom(0, 2);
-		  pswrdFile << val << sym[ran];
+		  pswrdFile << enc[i] << sym[ran];
     }
+    pswrdFile << '&' << enc[size-1] << endl;
 		pswrdFile.close();
 	}
 }
