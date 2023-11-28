@@ -33,30 +33,36 @@ The `generator.h` module is responsible for generating strong and random passwor
 ### Algorithm Overview:
 
 1. **Initialization of Character Sets:**
+
    - Define arrays `alphabets`, `nums`, and `symbols` representing lowercase letters, numbers, and symbols, respectively.
 
 2. **Determine Parts of Password:**
+
    - Calculate three parts (`prt1`, `prt2`, `prt3`) based on the desired password length (`n`). These parts represent the distribution of characters in the password.
 
 3. **Random Seed and Engine:**
+
    - Call makeRadom() from random.h function to generate random numbers by initializing a random seed using `random_device` and a Mersenne Twister engine (`mt19937`).
 
 4. **Generate Lowercase Letters:**
+
    - For the first part (`prt3`), randomly select lowercase letters from the `alphabets` array.
    - If within the first third of this part, convert the letter to uppercase for added variety.
 
 5. **Generate Numbers:**
+
    - For the second part (`prt2`), randomly select numbers from the `nums` array.
 
 6. **Generate Symbols:**
+
    - For the third part (`prt1`), randomly select symbols from the `symbols` array.
 
 7. **Shuffle Characters:**
+
    - Use `shuffle` to rearrange the characters in the password, providing additional randomness.
 
 8. **Return Generated Password:**
    - The generated password is returned, ready to be displayed or copied.
-
 
 #### How to Use:
 
@@ -106,23 +112,24 @@ The project includes a `main.cpp` file that acts as the entry point. It presents
 
 1. Compile the C++ code:
 
-    ```bash
-    g++ main.cpp -o main
-    ```
+   ```bash
+   g++ main.cpp -o main
+   ```
 
 2. Run the compiled executable:
 
-    ```bash
-    ./main
-    ```
+   ```bash
+   ./main
+   ```
 
 3. For fellow Linux Users:
 
-	Just make run.sh executable and run:
-	```bash
-	chmod u+x run.sh
-	./run.sh
-	``` 
+   Just make run.sh executable and run:
+
+   ```bash
+   chmod u+x run.sh
+   ./run.sh
+   ```
 
 ## Versions
 
@@ -130,7 +137,7 @@ You can access different versions of RaNdDoom from tags options in the repositor
 
 - v-2.1 : Basic Random password generation
 
-- v-2.3 : *Password saving feature* is added - can save password in a file called `password.txt`
+- v-2.3 : _Password saving feature_ is added - can save password in a file called `password.txt`
 
 - v-3.1 : `Encryption` and `Decryption` feature is added - now your passwords are encrypted before saving and then you can decrypt it when want to use them.
 
@@ -144,3 +151,7 @@ You can access different versions of RaNdDoom from tags options in the repositor
 Feel free to explore, customize, and contribute to RaNdDoom based on your requirements. Your contributions, if valid, will be appreciated.
 
 Enjoy! 😋
+
+## License
+
+[MIT License](LICENSE)
