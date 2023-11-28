@@ -15,7 +15,7 @@ vector <int> encrypt(string password){
     int x = password[i] + rand_num;
     enc.push_back(x);
   }
-  enc.push_back(0);
+  /* enc.push_back(0); */
   enc.push_back(rand_num);
 
   return enc;
