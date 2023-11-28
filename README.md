@@ -124,6 +124,16 @@ The project includes a `main.cpp` file that acts as the entry point. It presents
 	./run.sh
 	``` 
 
+## Versions
+
+You can access different versions of RaNdDoom from tags options in the repository!
+
+- v-2.1 : Basic Random password generation
+
+- v-2.3 : *Password saving feature* is added - can save password in a file called `password.txt`
+
+- v-3.1 : `Encryption` and `Decryption` feature is added - now your passwords are encrypted before saving and then you can decrypt it when want to use them.
+
 ## Notes
 
 - RaNdDoom provides a comprehensive solution for password generation, secure storage, and retrieval.
